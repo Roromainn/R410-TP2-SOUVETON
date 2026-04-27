@@ -17,13 +17,24 @@ export class Resources {
     }
     loadRessources(path) {
         return __awaiter(this, void 0, void 0, function* () {
-            try {
-                yield fetch(path);
+            let response = yield fetch(path + "/" + this.languageCode + ".json");
+            if (!response.ok) {
+                response = yield fetch(path + "/default.json");
             }
-            catch (_a) {
-                yield fetch("res/default.json");
+            let data = yield response.json();
+            for (let i = 0; i < data.length; i++) {
+                this.resources.set(data[i].name, data[i].value);
             }
         });
+    }
+    getResource(name) {
+        let value = this.resources.get(name);
+        if (value) {
+            return value;
+        }
+        else {
+            return name;
+        }
     }
 }
 //# sourceMappingURL=Resources.js.map

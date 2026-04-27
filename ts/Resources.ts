@@ -11,12 +11,27 @@ export class Resources {
         return this.languageCode;
     }
 
-    public async loadRessources(path:string):Promise<void> {
-        try {
-            await fetch(path);
+    public async loadRessources(path: string): Promise<void> {
+        let response = await fetch(path + "/" + this.languageCode + ".json");
+
+        if (!response.ok) {
+            response = await fetch(path + "/default.json");
         }
-        catch{
-            await fetch("res/default.json")
+
+        let data = await response.json();
+
+        for (let i = 0; i < data.length; i++) {
+            this.resources.set(data[i].name, data[i].value);
+        }
+    }
+
+    getResource(name: string): String {
+        let value = this.resources.get(name);
+
+        if (value) {
+            return value;
+        } else {
+            return name;
         }
     }
 }
