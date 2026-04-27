@@ -1,17 +1,5 @@
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
+import { MainView } from './MainView.js';
+window.onload = () => {
+    const view = new MainView("/res");
 };
-import { Resources } from './Resources.js';
-import { TextModifier } from './TextModifier.js';
-const res = new Resources();
-window.onload = () => __awaiter(void 0, void 0, void 0, function* () {
-    const tm = new TextModifier("/res");
-    yield tm.updateDocument();
-});
 //# sourceMappingURL=main.js.map

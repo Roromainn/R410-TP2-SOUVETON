@@ -1,9 +1,5 @@
-import { Resources } from './Resources.js';
-import { TextModifier } from './TextModifier.js';
+import { MainView } from './MainView.js';
 
-const res = new Resources();
-
-window.onload = async () => {
-    const tm = new TextModifier("/res");
-    await tm.updateDocument();
+window.onload = () => {
+    const view = new MainView("/res");
 };
