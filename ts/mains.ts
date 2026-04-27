@@ -1,5 +1,7 @@
-import { Resources } from './Ressource.js';
+import { Ressources } from './Ressource.js';
+import { TextModifier } from './TextModifier.js';
 
-const res = new Resources();
+const res = new Ressources();
+const tm = new TextModifier();
 
-console.log(res.LanguageCode);
+tm.updateDocument();

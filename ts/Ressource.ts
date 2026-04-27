@@ -1,9 +1,8 @@
-export class Resources {
+export class Ressources {
     private languageCode: string;
 
     constructor() {
         this.languageCode = navigator.language;
-        console.log(this.languageCode)
     }
 
     get LanguageCode(): string {

@@ -1,7 +1,6 @@
-export class Resources {
+export class Ressources {
     constructor() {
         this.languageCode = navigator.language;
-        console.log(this.languageCode);
     }
     get LanguageCode() {
         return this.languageCode;
