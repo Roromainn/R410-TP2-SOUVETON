@@ -1,6 +1,6 @@
 export class Resources {
     private languageCode: string;
-    private resources : Map<String,String>
+    private resources : Map<string,string>
 
     constructor() {
         this.languageCode = navigator.language;
@@ -25,7 +25,7 @@ export class Resources {
         }
     }
 
-    getResource(name: string): String {
+    getResource(name: string): string {
         let value = this.resources.get(name);
 
         if (value) {

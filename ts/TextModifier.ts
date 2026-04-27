@@ -14,6 +14,17 @@ export class TextModifier{
 
         document.documentElement.lang = rss.LanguageCode;
         await rss.loadRessources(this.resourcePath);
-        alert(rss.getResource("title")); 
+        let elements = document.querySelectorAll("[stringres]");
+
+        for (let i = 0; i < elements.length; i++) {
+            let el = elements[i] as HTMLElement;
+
+            let key = el.getAttribute("stringres");
+
+            if (key) {
+                el.innerText = rss.getResource(key) ; 
+            }
+        }
+
     }
 }
