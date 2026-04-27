@@ -1,4 +1,4 @@
-import { Resources } from './Resource.js';
+import { Resources } from './Resources.js';
 
 export class TextModifier{
     public updateDocument()

@@ -26,4 +26,4 @@ export class Resources {
         });
     }
 }
-//# sourceMappingURL=Resource.js.map
+//# sourceMappingURL=Resources.js.map
