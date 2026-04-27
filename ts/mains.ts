@@ -1,7 +1,7 @@
-import { Ressources } from './Ressource.js';
+import { Resources } from './Resource.js';
 import { TextModifier } from './TextModifier.js';
 
-const res = new Ressources();
+const res = new Resources();
 const tm = new TextModifier();
 
 tm.updateDocument();

@@ -1,4 +1,4 @@
-export class Ressources {
+export class Resources {
     private languageCode: string;
 
     constructor() {

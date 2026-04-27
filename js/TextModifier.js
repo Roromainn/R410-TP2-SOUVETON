@@ -1,8 +1,8 @@
-import { Ressources } from './Ressource.js';
+import { Resources } from './Resource.js';
 export class TextModifier {
     updateDocument() {
         let rss;
-        rss = new Ressources();
+        rss = new Resources();
         document.documentElement.lang = rss.LanguageCode;
     }
 }
